@@ -23,7 +23,7 @@ for doc in listdir(in_dir):
         result_json.append({temp_name_rename: {"attributes": temp_name, "after": 1}})
 
 
-        rename(f'./pdf/{doc}', f'./pdf/{temp_name_rename}')
+        rename(f'{in_dir}/{doc}', f'{in_dir}/{temp_name_rename}')
 
 with open ('ressult.json', 'w') as f:
     json.dump(result_json, f)
